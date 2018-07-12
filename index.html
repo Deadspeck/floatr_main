@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> floatr! </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- Font Awe -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <!-- favicocococn-->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-header">
+            <div class="nav-title">
+                <span>float<font color="lawngreen">r</font></span>
+            </div>
+        </div>
+        <div class="nav-btn">
+            <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <input type="checkbox" id="nav-check">
+        <div class="nav-links">
+            <a href="https://floatr.co/" target="_blank"><i class="fas fa-graduation-cap"></i> Tutorial</a>
+            <a href="#" id="modal-btn"><i class="fas fa-camera"></i> Apps</a>
+            <a id="user" href="https://floatr.co/ui/" target="_blank"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a id="user" href="https://discordapp.com/invite/2keWYZs" target="_blank"><i class="fas fa-user" target="_blank"></i> Sign Up</a>
+        </div>
+    </div>
+    <div id="modal-data" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 style="text-align: center"><span>float<font color="lawngreen">r</font> apps</span></h2>
+            </div>
+            <div class="modal-body">
+                <h2 style="color: whitesmoke"><span>float<font color="lawngreen">r</font></span> requires you to use one of these screenshot apps in order for it to work:</h2>
+                <h3 style="color: whitesmoke; padding-left: 50px">> ShareX: Screen capture, file sharing and productivity tool. <a href="https://floatr.co/app/" target="_blank" id="applink">Learn More.</a></h3>
+                <h3 style="color: whitesmoke; padding-left: 50px">> <span>float<font color="lawngreen">r</font>'s</span> own app. <a href="https://floatr.co/app/" target="_blank" id="applink">Learn More.</a></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <h1 class="animate-reveal animate-first">Welcome to <span>float<font color="lawngreen">r</font></span></h1>
+        <h3 class="animate-reveal animate-second" id="subtitle">A simple and easy object hosting service.</h3>
+        <hr class="animate-reveal animate-third" id="hr1">
+        <h3 class="animate-reveal animate-fourth">Get Started</h3>
+    </div>
+    <script>
+        let modal = document.getElementById('modal-data');
+        let btn = document.getElementById("modal-btn");
+        let span = document.getElementsByClassName('close')[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

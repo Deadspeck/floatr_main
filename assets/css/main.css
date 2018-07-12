@@ -1,0 +1,307 @@
+body {
+    background-image: url(../img/mainBG.png);
+    background-color: #202020;
+    background-blend-mode: overlay;
+    background-position: top;
+    background-repeat: no-repeat;
+    font-family: 'Segoe UI Light', sans-serif;
+    color: whitesmoke;
+    margin: auto;
+}
+
+.main {
+    font-size: 1.6vw;
+    text-align: center;
+    padding-top: 10%;
+}
+
+hr {
+    width: 0%;
+    border: double 3px white;
+    border-radius: 100px;
+}
+
+/*--------------------------- Navbar ---------------------------*/
+
+.nav {
+    height: auto;
+    width: 100%;
+    background-color: #202020;
+    position: relative;
+}
+
+.nav > .nav-header {
+    display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+    float: left;
+    display: inline-block;
+    font-size: 24px;
+    color: #fff;
+    padding: 10px 20px 13px 20px;
+}
+
+.nav > .nav-btn {
+    display: none;
+}
+
+.nav > .nav-links {
+    display: inline;
+    font-size: 20px;
+}
+
+.nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 26px 13px 26px;
+    text-decoration: none;
+    color: #efefef;
+    border: solid 3px #404040;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+.nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav > #nav-check {
+    display: none;
+}
+
+@media (max-width:800px) {
+    .nav > .nav-btn {
+        display: block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .nav > .nav-btn > label {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        padding: 13px 20px 5px 20px;
+    }
+    .nav > .nav-btn > label:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #202020;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+    .nav > .nav-links > a {
+        float: right;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        border-right: solid 0px;
+        border-bottom: solid 0px;
+    }
+    .nav > #nav-check:not(:checked) + .nav-links {
+        height: 0px;
+    }
+    .nav > #nav-check:checked + .nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+}
+
+#user {
+    float: right;
+}
+
+/*--------------------------- Modal ---------------------------*/
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 200px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+
+.modal-content {
+    position: relative;
+    background-color: #202020;
+    margin: auto;
+    border: 3px solid #606060;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@media (max-width:800px) {
+    .modal-content {
+        padding-bottom: 200px;
+    }
+}
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+
+.close {
+    color: white;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #202020;
+    color: white;
+    border-bottom: 3px solid #606060;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+#applink{
+    text-decoration: none;
+    color: lawngreen;
+    transition: all 2s ease-in;
+}
+
+#applink:hover{
+    text-decoration: underline;
+}
+
+/*--------------------------- Animate ---------------------------*/
+
+.animate-reveal {
+    letter-spacing: 2px;
+    opacity: 0;
+    -moz-animation: reveal 3s ease-in 1 normal forwards;
+    animation: reveal 3s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+}
+
+.animate-first {
+    -moz-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+.animate-second {
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.animate-third {
+    -moz-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+    width: 40%
+}
+
+.animate-fourth {
+    -moz-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.animate-fifth {
+    -moz-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+
+.animate-sixth {
+    -moz-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+
+@-moz-keyframes reveal {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
