@@ -1,24 +1,55 @@
 body {
-    background-image: url(../img/mainBG.png);
-    background-color: #202020;
-    background-blend-mode: overlay;
-    background-position: top;
-    background-repeat: no-repeat;
-    font-family: 'Segoe UI Light', sans-serif;
-    color: whitesmoke;
     margin: auto;
 }
 
+html {
+    height: 100%;
+    font-family: 'Segoe UI Light', sans-serif;
+    color: whitesmoke;
+}
+
+.parallax,
+body {
+    /* The image used */
+    background-image: url(../img/mainBG.png);
+
+    /* Full height */
+    height: 70%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .main {
+    background-color: rgba(0, 0, 0, .6);
+    height: auto;
     font-size: 1.6vw;
     text-align: center;
-    padding-top: 10%;
+    padding: 16px;
 }
 
 hr {
-    width: 0%;
+    width: 40%;
     border: double 3px white;
     border-radius: 100px;
+}
+
+.start {
+    color: whitesmoke;
+    text-decoration: none;
+    border-bottom: double 3px white;
+    border-radius: 10px;
+}
+
+#getstarted {
+    background-color: rgba(0, 0, 0, .6);
+    height: 100%;
+    font-size: 1.6vw;
+    text-align: center;
+    padding: 16px;
 }
 
 /*--------------------------- Navbar ---------------------------*/
@@ -27,7 +58,7 @@ hr {
     height: auto;
     width: 100%;
     background-color: #202020;
-    position: relative;
+    position: fixed;
 }
 
 .nav > .nav-header {
@@ -222,13 +253,13 @@ hr {
     padding: 2px 16px;
 }
 
-#applink{
+#applink {
     text-decoration: none;
     color: lawngreen;
     transition: all 2s ease-in;
 }
 
-#applink:hover{
+#applink:hover {
     text-decoration: underline;
 }
 
@@ -254,7 +285,6 @@ hr {
 .animate-third {
     -moz-animation-delay: 1.5s;
     animation-delay: 1.5s;
-    width: 40%
 }
 
 .animate-fourth {
@@ -263,13 +293,13 @@ hr {
 }
 
 .animate-fifth {
-    -moz-animation-delay: 1.5s;
-    animation-delay: 1.5s;
+    -moz-animation-delay: 2.5s;
+    animation-delay: 2.5s;
 }
 
 .animate-sixth {
-    -moz-animation-delay: 1.5s;
-    animation-delay: 1.5s;
+    -moz-animation-delay: 4s;
+    animation-delay: 4s;
 }
 
 @-moz-keyframes reveal {
